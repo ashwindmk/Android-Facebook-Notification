@@ -25,7 +25,7 @@ public class RegistrationIntentService extends IntentService
             try {
                 synchronized (this) {
                     InstanceID instanceID = InstanceID.getInstance(this);
-                    String token = instanceID.getToken("1084326831548", GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
+                    String token = instanceID.getToken("Your Firebase Sender ID", GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
                     Log.i(LOG_TAG, "GCM Registration Token: " + token);
                     AppEventsLogger.setPushNotificationsRegistrationId(token);
                 }
